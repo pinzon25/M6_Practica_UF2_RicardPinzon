@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="489.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="Bt_actualitza" layoutX="507.0" layoutY="401.0" mnemonicParsing="false" text="Actualitzar" />
+      <Button fx:id="Bt_surtActualitza" layoutX="260.0" layoutY="401.0" mnemonicParsing="false" text="Sortir" />
+      <Label layoutX="277.0" layoutY="169.0" prefHeight="17.0" prefWidth="42.0" text="Nom:" />
+      <Label layoutX="273.0" layoutY="224.0" text="Cognom:" />
+      <Label layoutX="273.0" layoutY="278.0" text="Edat:" />
+      <TextField fx:id="Tf_nomAl" layoutX="337.0" layoutY="165.0" />
+      <TextField fx:id="Tf_cognomAl" layoutX="337.0" layoutY="220.0" />
+      <TextField fx:id="Tf_edatAl" layoutX="337.0" layoutY="274.0" />
+      <Label layoutX="26.0" layoutY="23.0" text="Actualitzar alumne" underline="true">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

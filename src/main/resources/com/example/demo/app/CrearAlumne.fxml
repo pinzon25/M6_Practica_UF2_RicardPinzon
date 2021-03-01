@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="198.0" layoutY="132.0" text="Nom:" />
+      <Label layoutX="197.0" layoutY="192.0" text="Cognoms:" />
+      <Label layoutX="199.0" layoutY="252.0" text="Edat:" />
+      <TextField fx:id="Tf_Nom" layoutX="286.0" layoutY="128.0" />
+      <TextField fx:id="Tf_Cognoms" layoutX="286.0" layoutY="188.0" />
+      <TextField fx:id="Tf_Edat" layoutX="286.0" layoutY="248.0" />
+      <Button fx:id="Bt_crear" layoutX="435.0" layoutY="340.0" mnemonicParsing="false" text="Crear" />
+      <Button fx:id="Bt_Sortir" layoutX="213.0" layoutY="340.0" mnemonicParsing="false" text="Sortir" />
+      <Label layoutX="14.0" layoutY="14.0" text="Crear Alumne" underline="true">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

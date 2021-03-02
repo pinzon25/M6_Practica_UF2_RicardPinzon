@@ -15,7 +15,6 @@ class MenuPrincipal: View() {
     private val botoCrearAlumne: Button by fxid("Bt_crearAlumne")
     private val botoEsborrarAlumne: Button by fxid("Bt_EsborrarAlumne")
     private val botoActualitzarAlumne: Button by fxid("Bt_ActualitzarAlumne")
-    private val botoUpdate: ImageView by fxid("Im_update")
     var conexio: Connection = Connexio().connexio()
     var llistatAlumnes:MutableList<Alumne> = ArrayList()
     var t:javafx.scene.control.TableView<Alumne>? = null
@@ -48,9 +47,7 @@ class MenuPrincipal: View() {
         }
 
 
-    botoCrearAlumne.setOnMouseClicked { openInternalWindow<CrearAlumne>() /*replaceWith<CrearAlumne>()*/ }
-
-    botoUpdate.setOnMouseClicked { }
+    botoCrearAlumne.setOnMouseClicked { openInternalWindow<CrearAlumne>() }
 
         botoActualitzarAlumne.setOnMouseClicked {
              al = t!!.selectedItem
@@ -88,7 +85,6 @@ private fun carregaAlumnes(c:Connection,alumnes:MutableList<Alumne>) {
 }
 
 private fun esborraAlumne(c:Connection, id: Int?){
-        //MenuPrincipal().conexio
         val l = MenuPrincipal().llistatAlumnes
         val ps = c.prepareStatement("DELETE FROM Alumne WHERE id_alumne = ?")
 
@@ -103,7 +99,3 @@ private fun esborraAlumne(c:Connection, id: Int?){
  //c.close()
 }
 
-/*class controladorMenuPrincipal: Controller(){
-    val menu = MenuPrincipal()
-    val alumne =  menu.al
-}*/

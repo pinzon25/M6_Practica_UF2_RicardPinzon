@@ -11,8 +11,5 @@ class Connexio{
         return db
     }
 
-    fun max(){
-
-    }
 }
 

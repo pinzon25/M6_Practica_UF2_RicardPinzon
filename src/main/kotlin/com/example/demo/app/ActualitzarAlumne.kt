@@ -80,7 +80,7 @@ class ActualitzarAlumne: View() {
 }
 
 fun actualitza(a:Alumne, c:Connection){
-    println("Has entrat al metode on actualitzem els camps al SQL.")
+    //println("Has entrat al metode on actualitzem els camps al SQL.")
 
     val ps = c.prepareStatement("UPDATE Alumne SET Nom = ?, Cognoms = ?,  edat = ? WHERE id_alumne = ?")
     ps.setString(1, a.nom)

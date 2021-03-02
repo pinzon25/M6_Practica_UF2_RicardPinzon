@@ -25,6 +25,7 @@ class MenuPrincipal: View() {
 
 
     init {
+        runAsync {
 
         carregaAlumnes(conexio, llistatAlumnes)
 
@@ -41,8 +42,9 @@ class MenuPrincipal: View() {
             prefWidth= 345.0
             layoutX=306.0
             layoutY=100.0
-           }
+             }
 
+           }
         }
 
 
@@ -60,9 +62,10 @@ find<ActualitzarAlumne>(params = mapOf("message" to al!!.id.toString()))
             replaceWith<ActualitzarAlumne>() }
 
         botoEsborrarAlumne.setOnMouseClicked {
+            //runAsync {
             var al = t!!.selectedItem!!.id
-            //println(al)
             esborraAlumne(conexio,al)
+           // }
         }
     }
 }

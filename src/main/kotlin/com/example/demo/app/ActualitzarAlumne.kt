@@ -25,8 +25,6 @@ class ActualitzarAlumne: View() {
 
     override val root : AnchorPane by fxml()
 
-//FALTA PODER MODIFICAR ELS VALORS DEL ALUMNE I FER EL UPDATE A LA TAULA DE SQL.
-
     companion object {
         var al:Alumne? = null
     }
@@ -40,12 +38,15 @@ class ActualitzarAlumne: View() {
             edatalumne.text = Companion.al?.edat.toString()
 
         botoActualitzar.setOnMouseClicked {
+            //runAsync {
            var a:Alumne = Alumne(al!!.id,nomalumne.text,cognomalumne.text,edatalumne.text.toInt())
             println(a)
             actualitza(a,conexio)
+            alert(Alert.AlertType.CONFIRMATION, "", "L'alumne s'ha actualitzat correctament!")
             nomalumne.text=null
             cognomalumne.text=null
             edatalumne.text=null
+          //}
         }
 
         botoSortir.setOnMouseClicked {
